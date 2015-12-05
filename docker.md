@@ -18,7 +18,7 @@ INSTRUCTION arguments
 * **ENTRYPOINT**<br>Configures the container that will run as an executable. Only the last `ENTRYPOINT` takes effect. Command line arguments to `docker run <image>` will be arguments to `ENTRYPOINT`.<br>**`ENTRYPOINT ["executable", "param1", "param2"`** or **`ENTRYPOINT command param1 param2`**<br>`ENTRYPOINT ["top", "-b"]` (when `docker run -H` is called, `top -b -H` will start in the container)<br>The provided entry point setting can be overriden in `docker run` with `--entrypoint`.
 * **CMD**<br>Provides defaults for an executing container.<br>It can include an executable, though if absent `ENTRYPOINT` must be specified. Command line arguments to `docker run <image>` will override `CMD`.<br>Only the last `CMD` takes effect.<br>**`CMD ["executable", "param1", "param2"]`** or **`CMD command param1 param2`**<br>`CMD ["--help"]` (passes `--help` to the executable if no `docker run` arguments were provided.
 * **ADD**<br>Copies new files, directories or remote file URLs into the local filesystem of the container.<br>**`ADD <src> <dest>`**<br>`ADD *.txt /textfiles` (Adds all files with .txt extension to the container's filesystem under /textfiles<br>The `<src>` path must be inside the context of the build. If `<src>` is a directory, the entire content of it is copied. The directory itself is not copied, only the contents.<br>If the `<src>` parameter is an archive in a recognised compression format, it will be unpacked.
-* **COPY**<br>Basically the same as `ADD`, but it does not accept urls nor extracts compressed files.
+* **COPY**<br>Basically the same as `ADD`, but it does not accept urls nor extracts compressed files. It is the preferred instructicon over `ADD`.
 * **EXPOSE**<br>Informs Docker that the container listens on the declared ports at runtime.<br>**`EXPOSE <port> [<port> ...]`**<br>`EXPOSE 80 8080`
 * **VOLUME**<br>Creates a mount point and marks it as holding externally mounted volumes from either the native host or other containers.<br>**`VOLUME <mountpoint> <mountpoint>...`**<br>`VOLUME /var/log /var/db`<br>
 * **USER**<br>Sets the UID to use when running the image and when executing `RUN`, `CMD` or `ENTRYPOINT`.<br>**`USER <username>`**<br>`USER admin`
@@ -32,6 +32,9 @@ INSTRUCTION arguments
 * `RUN` actually runs a command and commits the result at build time.
 * `CMD` does not execute anything at build time, used when container starts.
 
+####COPY vs ADD
+* They are functionally similar, `COPY` only supports basic file copying, `ADD` has more features like tar extraction and remote URL support. The best use for add is auto-extracting tar files into the image.
+
 ####CMD vs ENTRYPOINT
 * `CMD` provides defaults, which are not used if  `docker run` arguments were supplied.
 * `ENTRYPOINT` provides the entrypoint to be executed. `docker run` arguments will not override `ENTRYPOINT` parameters, but they will be appended to it.
@@ -43,4 +46,5 @@ INSTRUCTION arguments
 
 ####Sources
 * https://docs.docker.com/engine/reference/builder
+* https://docs.docker.com/engine/articles/dockerfile_best-practices
 * http://crosbymichael.com/dockerfile-best-practices
