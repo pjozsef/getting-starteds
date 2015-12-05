@@ -9,7 +9,7 @@
 * Unordered lists start with \* or \_<br>
 * Ordered lists start with 1. 2. etc<br>
 * Lists can be nested<br>
-* Link \[Text to show\]\(url\)<br>
+* Link \[Text to show\]\(www.example.com\)<br>
 * Code syntax highlight<br>
 \`\`\`java<br>
 System.out.println("I am syntax highlighted"<br>
