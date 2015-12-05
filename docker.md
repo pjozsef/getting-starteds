@@ -47,4 +47,4 @@ INSTRUCTION arguments
 ####Sources
 * https://docs.docker.com/engine/reference/builder
 * https://docs.docker.com/engine/articles/dockerfile_best-practices
-* http://crosbymichael.com/dockerfile-best-practices
+* http://crosbymichael.com/dockerfile-best-practices.html
