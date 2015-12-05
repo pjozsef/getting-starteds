@@ -1,4 +1,4 @@
-Github markdown essentials
+####Github markdown essentials
 
 * Headings \# (can repeat up to 6 times)<br>
 * Blockquotes \><br>
@@ -27,6 +27,6 @@ Markdown is allowed in tables<br>
 
 
 
-Sources:
+####Sources:
 * https://help.github.com/articles/markdown-basics/
 * https://help.github.com/articles/github-flavored-markdown/
