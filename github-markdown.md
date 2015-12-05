@@ -19,7 +19,7 @@ Left-aligned \| Centered \| Right-aligned<br>
 \:----------------|\:------------:|-------------------:<br>
 Value1 \| Value2 \| Value3<br>
 Value4 \| Value5 \| Value6<br>
-Markdown is allowed in tables<br>
+*Markdown is allowed in tables*<br>
 * Subset of HTML is allowed in markdown<br>
 * Tasks <br>- \[x\] Checked<br>
 \- [ ] Unchecked
