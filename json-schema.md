@@ -1,8 +1,8 @@
 ####JSON Schema
 
 ####Basic keywords
-* **`type`**<br>Defines what type of value is accepted for a given property.<br>Example: {"type": "object"}
-* **`id`**<br>Declares a unique identifier for the schema.<br>Declares a base URL against which $ref URLs are resolved.<br>Example: {"id": "http://my.domain.com/schemas/address.json"}
+* **`type`**<br>Defines what type of value is accepted for a given property.<br>Example: `{"type": "object"}`
+* **`id`**<br>Declares a unique identifier for the schema.<br>Declares a base URL against which $ref URLs are resolved.<br>Example: `{"id": "http://my.domain.com/schemas/address.json"}`
 *  **`$schema`** [Explained here](http://spacetelescope.github.io/understanding-json-schema/reference/schema.html)
 
 ####Type specific keywords
