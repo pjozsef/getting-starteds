@@ -1,10 +1,11 @@
 ####JSON Schema
 
-####Basics
+####Basic keywords
 * **`type`**<br>Defines what type of value is accepted for a given property.<br>Example: {"type": "object"}
 * **`id`**<br>Declares a unique identifier for the schema.<br>Declares a base URL against which $ref URLs are resolved.<br>Example: {"id": "http://my.domain.com/schemas/address.json"}
+*  **`$schema`** [Explained here](http://spacetelescope.github.io/understanding-json-schema/reference/schema.html)
 
-####Types
+####Type specific keywords
 * **`string`**
   * minLength [number]
   * maxLength [number]
@@ -37,6 +38,28 @@
     * additionalItems [bool]
 * **`boolean`**
 * **`null`**
+
+####Generic keywords
+* Metadata<br>These are not used strictly for validation, but describe parts of a schema.
+ * **`title`**
+ * **`description`**
+ * **`default`**<br>Defines a default value for an item. Some schema validators might ignore this keyword.
+* Enumerations
+ * **`enum`**<br>Limits the possible values of an item.<br>Example: `{"enum": ["red", "green", "blue", 0, null]}`<br>The enumerated values can differn in type.
+
+####Combining schemas
+* **`allOf`** [array]
+* **`anyOf`** [array]
+* **`oneOf`** [array]
+* **`not`** [object]
+
+####Structuring complex schemas
+* **`$ref`** [[JSON Pointer](https://tools.ietf.ort/html/rfc6901)]
+ * JSON Pointer is similar to XPath for XML.
+ * `$ref` can be a relative or absolute URI.
+<br>Example: `{"$ref": schemas.json#/definitions/address}`
+<br>Schemas can be extended by combining `$ref` with `allOf`/`anyOf`/`oneOf`
+<br>[See here for more details](http://spacetelescope.github.io/understanding-json-schema/structuring.html)
 
 ####Sources
 http://spacetelescope.github.io/understanding-json-schema/
