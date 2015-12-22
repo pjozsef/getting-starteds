@@ -7,8 +7,8 @@ Use `.dockerignore` file to exclude files or folders. It basically works like `.
 By default the `Dockerfile` should be at the root of the context.<br>
 
 Basic format:<br>
-`# **Comment**`<br>
-`INSTRUCTION arguments`
+\# **Hasmark marks a comment**<br>
+INSTRUCTION arguments
 
 ####INSTRUCTIONS
 * **FROM**<br>Specifies the base image.<br>**`FROM <image>:<tag>`** or **`FROM <image>@<digest>`**<br>`tag` or `digest` values are optional, by default `latest` is used.<br>**`FROM java:8`**
