@@ -7,7 +7,7 @@ Use `.dockerignore` file to exclude files or folders. It basically works like `.
 By default the `Dockerfile` should be at the root of the context.<br>
 
 Basic format:<br>
-`\# **Comment**`<br>
+`# **Comment**`<br>
 `INSTRUCTION arguments`
 
 ####INSTRUCTIONS
