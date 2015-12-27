@@ -85,7 +85,7 @@ Provides metadata about the API.
 * consumes [string]
 * produces [string]
 * parameters [[Parameter Object]](#parameterobject)/[[Reference Object]](#referenceobject)
-* responses [[Responses Object]](#responsesobject)
+* **responses [[Responses Object]](#responsesobject)**
 * schemes [string[]]<br>Trasnfer protocol of the operation, values can only be `http`, `https`, `ws`, `wss`
 * deprecated [boolean]
 * security [[Security Requirement Object]](#securityrequirementobject)
