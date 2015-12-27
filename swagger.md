@@ -66,3 +66,34 @@ Provides metadata about the API.
 * /{path} [Path Item Object]<br>A relative path to an individual endpoint.
 
 ####<a name="pathitemobject">Path Item Object</a>
+* get [[Operation Object]](#operationobject)
+* post [[Operation Object]](#operationobject)
+* put [[Operation Object]](#operationobject)
+* delete [[Operation Object]](#operationobject)
+* options [[Operation Object]](#operationobject)
+* head [[Operation Object]](#operationobject)
+* patch [[Operation Object]](#operationobject)
+* parameters [[Parameter Object]](#parameterobject)/[[Reference Object]](#referenceobject)
+<br>A list of parameters that are applicable for all the operations described under this path.
+* $ref [string]<br>External definition of this path item.
+
+####<a name="operationobject">Operation Object</a>
+* tags [string]<br>List of tags for API documentation, logical grouping of operations by resources, etc.
+* summary [string]
+* description [string]
+* operationId [string]<br>Unique string used to identify the operation. Must be unique among all operations in tha API.
+* consumes [string]
+* produces [string]
+* parameters [[Parameter Object]](#parameterobject)/[[Reference Object]](#referenceobject)
+* responses [[Responses Object]](#responsesobject)
+* schemes [string[]]<br>Trasnfer protocol of the operation, values can only be `http`, `https`, `ws`, `wss`
+* deprecated [boolean]
+* security [[Security Requirement Object]](#securityrequirementobject)
+
+####<a name="externaldocumentationobject">External Documentation Object</a>
+* description [string]
+* url [string]
+
+####<a name="parameterobject">Parameter Object</a>
+
+####<a name="object"> Object</a>
