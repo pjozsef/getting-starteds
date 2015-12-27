@@ -30,19 +30,19 @@
 Root document object.
 * **swagger [string]**<br>Specifies the Swagger Specification version.
 * **info [[Info Object]](#infoobject)**<br>Provides metadata about the API.
-* **paths [Paths Object]**
+* **paths [[Paths Object]](#pathsobject)**
 * host [string]<br>The hostname or ip that serves tha API.<br>May include a port.
 * basepath [string]<br>The base path on which the API is served, relative to `host`.<br>Starts with a leading slash.
 * schemes [string[]]<br>The transfer protocol of the API. Values can only be `http`, `https`, `ws`, `wss`.
 * consumes [string[]]<br>The list of MIME types the APIs can consume.
 * produces [string[]]<br>The list of MIME types the APIs can produce.
-* definitions [Definitions Object]<br>An object to hold data types produced and consumed by operations.
-* parameters [Parameters Definitions Object]<br>An object to hold parameters that can be used across operations.
-* responses [Responses Definitions Object]<br>An object to hold responses that can be used across operations.
-* securityDefinitions [Security Definitions Object]<br>Security scheme definitions that can be used across the specifications.
-* security [Security Requirement Object]<br> A declaration of which security schemes are applied for the API as a whole.
-* tags [Tag Object]<br>A list of tags used by the specification with additional metadata.
-* externalDocs [external Documentation Object]<br>Additional external documentation.
+* definitions [[Definitions Object]](#definitionsobject)<br>An object to hold data types produced and consumed by operations.
+* parameters [[Parameters Definitions Object]](#parametersdefinitionsobject)<br>An object to hold parameters that can be used across operations.
+* responses [[Responses Definitions Object]](#responsesdefinitionsobject)<br>An object to hold responses that can be used across operations.
+* securityDefinitions [[Security Definitions Object]](#securitydefinitionsobject)<br>Security scheme definitions that can be used across the specifications.
+* security [[Security Requirement Object]](#securityrequirementobject)<br> A declaration of which security schemes are applied for the API as a whole.
+* tags [[Tag Object]](#tagobject)<br>A list of tags used by the specification with additional metadata.
+* externalDocs [[External Documentation Object]](#externaldocumentationobject)<br>Additional external documentation.
 
 ####<a name="infoobject">Info object</a>
 Provides metadata about the API.
@@ -50,8 +50,8 @@ Provides metadata about the API.
 * **version [string]**
 * description [string]
 * termsOfService [string]
-* contact [Contact Object]
-* license [License Object]
+* contact [[Contact Object]](#contactobject)
+* license [[License Object]](#licenceobject)
 
 ####<a name="contactobject">Contact object</a>
 * name [string]
@@ -118,8 +118,8 @@ Collection format:
 A limited subset of JSON-Schema's items object. It is used by parameter definitions that are not located in `body`.
 
 ####<a name="responsesobject">Responses Object</a>
-* default [[Response Object]](#responseobject)/[[Reference Object]](#refereneobject)
-* {HTTP status code} [[Response Object]](#responseobject)/[[Reference Object]](#refereneobject)
+* default [[Response Object]](#responseobject)/[[Reference Object]](#referenceobject)
+* {HTTP status code} [[Response Object]](#responseobject)/[[Reference Object]](#referenceobject)
 
 ####<a name="responseobject">Response Object</a>
 * **description [string]**
@@ -158,10 +158,10 @@ The same as described in the JSON Schema specification, extended by the followin
 
 ####<a name="definitionsobject">Definitions Object</a>
 An object to hold data types that can be consumed and produced by operations.
-*{name} [[Schema Object}}(#schemaobject)
+* {name} [[Schema Object}}(#schemaobject)
 
 ####<a name="parametersdefinitionsobject">Parameters Definitions Object</a>
-*An object to hold parameters to be reused across operations.
+An object to hold parameters to be reused across operations.
 * {name} [[Parameter Object]](#parameterobject)
 
 ####<a name="responsesdefinitionsobject">Responses Definitions Object</a>
@@ -170,7 +170,7 @@ An object to holds responses to be reused accross operations.
 
 ####<a name="securitydefinitionsobject">Security Definitions Object</a>
 A declaration of the security schemes available to be used in the specifications.
-*{name} [[Security Scheme Object]](#securityschemeobject)
+* {name} [[Security Scheme Object]](#securityschemeobject)
 
 ####<a name="securityschemeobject">Security Scheme Object</a>
 Allows the definition of a security scheme that can be used by the operations. Supported schemes are basic authentication, an API key and OAuth2's common flows.
@@ -189,7 +189,7 @@ Lists the available scopes for an OAuth2 security scheme.
 
 ####<a name="securityrequirementobject">Security Requirement Object</a>
 Lists the required security schemes to execute this operation. The object can have multiple security schemes declared in it which are all required.
-The name used for each property must correspond to a security scheme declared in the [[Security Definitions]](#securitydefinitions).
+The name used for each property must correspond to a security scheme declared in the [[Security Definitions]](#securitydefinitionsobject).
 * {name} [string]<br>If the security scheme is of type `Oauth2`, then the value is a list of scope names required for the execution. For other security scheme types, the array must be empty.
 
 ####Sources
