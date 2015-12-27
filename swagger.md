@@ -138,7 +138,7 @@ A limited subset of JSON-Schema's items object. It is used by parameter definiti
 * collectionFormat, default, maximum, minimum, exclusiveMaximum, exclusiveMinimum, maxLength, minLength, pattern, maxItems, minItems, uniqueItems, enum, multipleOf
 
 ####<a name="exampleobject">Example Object</a>
-* {mime type} [*]<br{The name of the property must be one of the `Operation`'s `produces` values. The value should be an example of what such a response would look like.
+* {mime type} [*]<br>{The name of the property must be one of the `Operation`'s `produces` values. The value should be an example of what such a response would look like.
 
 ####<a name="tagobject">Tag Object</a>
 * name [string]<br>
