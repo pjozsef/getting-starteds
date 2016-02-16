@@ -105,7 +105,7 @@ If `in` is `body`:
 * schema [[Schema Object]](#schemaobject)
 
 Otherwise:
-* type, format, allowEmptyValue, items, collectionFormat, default, maximum, minimum, exclusiveMaximum, exclusiveMinimum, maxLength, minLength, pattern, maxItems, minItems, uniqueItems, enum, multipleOf
+* **type**, format, allowEmptyValue, items, collectionFormat, default, maximum, minimum, exclusiveMaximum, exclusiveMinimum, maxLength, minLength, pattern, maxItems, minItems, uniqueItems, enum, multipleOf
 
 Collection format:
 * csv<br>foo,bar
